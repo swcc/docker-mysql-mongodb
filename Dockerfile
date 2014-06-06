@@ -32,4 +32,4 @@ EXPOSE 3306
 
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-#CMD ["/etc/mysql/mysql_setup.sh"]
+CMD ["/etc/mysql/mysql_setup.sh"]
