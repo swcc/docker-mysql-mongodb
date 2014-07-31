@@ -30,6 +30,9 @@ RUN chmod +x        /etc/mysql/mysql_setup.sh
 EXPOSE 3306
 # END MySQL Installation
 
+# UCARP Installation
+RUN apt-get install -y ucarp
+
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 CMD ["/etc/mysql/mysql_setup.sh"]
