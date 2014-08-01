@@ -47,6 +47,7 @@ RUN echo "bind_ip = 0.0.0.0" >> /etc/mongodb.conf
 RUN mkdir /etc/service/mongo
 ADD build/run_mongo.sh /etc/service/mongo/run
 RUN chown root /etc/service/mongo/run
+RUN chmod +x /etc/service/mongo/run
 
 # Spin-docker currently supports exposing port 22 for SSH and
 # one additional application port (Mongo runs on 27017)
